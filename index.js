@@ -12,6 +12,10 @@ bot.command('start', (ctx) => {
   ctx.reply('Hello! Your bot is up and running.');
 });
 
+app.get("/", (req,res) => {
+  res.send("Hello");
+})
+
 app.post('/telegram-webhook', (req, res) => {
   bot.handleUpdate(req.body);
   res.sendStatus(200);
