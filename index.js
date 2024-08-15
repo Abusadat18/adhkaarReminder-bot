@@ -21,6 +21,10 @@ app.post('/telegram-webhook', (req, res) => {
   res.sendStatus(200);
 });
 
+app.get('/telegram-webhook', (req, res) => {
+  res.send('Webhook endpoint is set up correctly.');
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
