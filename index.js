@@ -5,6 +5,7 @@ const { Telegraf } = require('telegraf');
 
 const app = express();
 const bot = new Telegraf(process.env.TOKEN);
+bot.telegram.setWebhook('https://adhkaar-reminder-bot.vercel.app/telegram-webhook');
 
 app.use(bodyParser.json());
 
