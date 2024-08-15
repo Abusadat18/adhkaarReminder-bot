@@ -17,6 +17,8 @@ app.get("/", (req,res) => {
 })
 
 app.post('/telegram-webhook', (req, res) => {
+  console.log('Received POST request:', req.headers);  // Log headers
+  console.log('Request body:', req.body);  // Log body
   bot.handleUpdate(req.body);
   res.sendStatus(200);
 });
